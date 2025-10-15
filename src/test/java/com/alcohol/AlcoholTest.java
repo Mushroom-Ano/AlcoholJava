@@ -6,8 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DrinkTest {
+class AlcoholTest {
     public Alcohol testAlcohol;
+    public Alcohol tooMuchAlcohol;
 
     @BeforeEach
     public void setup(){
@@ -21,26 +22,9 @@ class DrinkTest {
     }
 
     @Test
-    void getName() {
-    }
-
-    @Test
-    void setName() {
-    }
-
-    @Test
-    void getVolume() {
-    }
-
-    @Test
-    void setVolume() {
-    }
-
-    @Test
-    void getPrice() {
-    }
-
-    @Test
-    void setPrice() {
+    public void AlcoholPercentageErrorCheck() {
+        Throwable exception = assertThrows(TooMuchAlcoholException.class, () ->
+                tooMuchAlcohol = new Alcohol("TooMuch", 100f, 1.0f, 110, true));
+        assertEquals("Too much alcohol, save yourself now!", exception.getMessage());
     }
 }
