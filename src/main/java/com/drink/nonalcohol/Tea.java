@@ -1,6 +1,7 @@
 package com.drink.nonalcohol;
 
 import com.drink.Drink;
+import com.drink.UndrinkableException;
 import com.drink.alcohol.DrunkException;
 
 public class Tea extends Drink {
@@ -21,5 +22,16 @@ public class Tea extends Drink {
     @Override
     public boolean isDrinkable(){
         return this.isDrinkable;
+    }
+
+    @Override
+    public void toDrink () throws UndrinkableException {
+        if (isDrinkable()) {
+            System.out.println("Drink has been drunk");
+            setVolume(0);
+        }
+        else {
+            throw new UndrinkableException(getName());
+        }
     }
 }
