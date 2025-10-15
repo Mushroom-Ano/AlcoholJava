@@ -6,12 +6,12 @@ import com.drink.alcohol.DrunkException;
 
 public class Tea extends Drink {
 
-    private final boolean isDrinkable;
+    private final boolean drinkable;
     private float caffeine;
 
-    public Tea(String name, float volume, float price, float caffeine, boolean isDrinkable) throws TooMuchCaffeineException{
+    public Tea(String name, float volume, float price, float caffeine, boolean drinkable) throws TooMuchCaffeineException{
         super(name, volume, price);
-        this.isDrinkable = isDrinkable;
+        this.drinkable = drinkable;
         this.caffeine = caffeine;
 
         if (caffeine > 100) {
@@ -19,9 +19,17 @@ public class Tea extends Drink {
         }
     }
 
+    public float getCaffeine() {
+        return caffeine;
+    }
+
+    public void setCaffeine(float caffeine) {
+        this.caffeine = caffeine;
+    }
+
     @Override
     public boolean isDrinkable(){
-        return this.isDrinkable;
+        return this.drinkable;
     }
 
     @Override

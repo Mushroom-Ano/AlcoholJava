@@ -1,9 +1,6 @@
 package com.drink.alcohol;
 
 import com.drink.DrinkOverflowException;
-import com.drink.alcohol.Alcohol;
-import com.drink.alcohol.DrunkException;
-import com.drink.alcohol.TooMuchAlcoholException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
