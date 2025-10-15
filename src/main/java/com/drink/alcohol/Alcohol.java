@@ -1,4 +1,6 @@
-package com.alcohol;
+package com.drink.alcohol;
+
+import com.drink.Drink;
 
 public class Alcohol extends Drink {
 

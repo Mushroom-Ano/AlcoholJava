@@ -1,4 +1,4 @@
-package com.alcohol;
+package com.drink;
 
 public interface IDrinkable {
     public boolean isDrinkable ();

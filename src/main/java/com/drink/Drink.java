@@ -1,4 +1,4 @@
-package com.alcohol;
+package com.drink;
 
 public abstract class Drink implements IDrinkable{
     private String name;
