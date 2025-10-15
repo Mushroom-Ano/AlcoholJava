@@ -27,4 +27,11 @@ class AlcoholTest {
                 tooMuchAlcohol = new Alcohol("TooMuch", 100f, 1.0f, 110, true));
         assertEquals("Too much alcohol, save yourself now!", exception.getMessage());
     }
+
+    @Test
+    public void DrunkErrorCheck() {
+        Throwable exception = assertThrows(DrunkException.class, () ->
+                tooMuchAlcohol = new Alcohol("TooMuch", 60f, 1.0f, 60, true));
+        assertEquals("Control yourself, AA now!", exception.getMessage());
+    }
 }
