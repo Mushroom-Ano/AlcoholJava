@@ -19,6 +19,6 @@ public class AlcoholParameterResolver implements ParameterResolver {
     //    which will then be injected into your test method
         @Override
         public Object resolveParameter(ParameterContext parameterContext, ExtensionContext extensionContext) throws ParameterResolutionException {
-            return new Alcohol("name",0f,0f,0f, false, "brand" );
+            return new Alcohol("name",1000f,0f,0f, false, "brand" );
         }
     }

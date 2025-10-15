@@ -4,8 +4,7 @@ public abstract class Drink implements IDrinkable{
     private String name;
     private float volume;
     private float price;
-
-    private static float originalVolume;
+    private final float originalVolume;
 
     public Drink(String name, float volume, float price) {
         this.name = name;
@@ -19,8 +18,12 @@ public abstract class Drink implements IDrinkable{
         setVolume(0);
     }
 
-    public void fillDrink(int originalVolume, int newVolume) {
-
+    public void fillDrink(float newVolume) throws DrinkOverflowException {
+        if (newVolume + getVolume() > getOriginalVolume()){
+            throw new DrinkOverflowException(newVolume + getVolume() - getOriginalVolume());
+        } else {
+            setVolume(newVolume + getVolume());
+        }
     }
 
     public String getName() {
@@ -45,5 +48,9 @@ public abstract class Drink implements IDrinkable{
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public float getOriginalVolume() {
+        return originalVolume;
     }
 }

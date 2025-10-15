@@ -28,7 +28,8 @@ public class Alcohol extends Drink {
 
     @Override
     public void toDrink() {
-        System.out.println("Alcohol has been drunk!");
+        String formatted = String.format("Alcohol has been drunk! (%s ml)", getVolume());
+        System.out.println(formatted);
         setVolume(0);
     }
 

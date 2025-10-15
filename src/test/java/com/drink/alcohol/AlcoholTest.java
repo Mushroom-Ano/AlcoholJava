@@ -1,5 +1,6 @@
 package com.drink.alcohol;
 
+import com.drink.DrinkOverflowException;
 import com.drink.alcohol.Alcohol;
 import com.drink.alcohol.DrunkException;
 import com.drink.alcohol.TooMuchAlcoholException;
@@ -31,9 +32,19 @@ class AlcoholTest {
 
     @ParameterizedTest
     @ValueSource(floats = {100, 400, 800, 1000})
-    @DisplayName("Filling drink should fill the drink back to the original volume")
+    @DisplayName("Filling drink should fill the drink within the original volume")
     public void fillDrink(float amount, Alcohol alcohols) {
-        alcohols.
+        alcohols.toDrink();
+        alcohols.fillDrink(amount);
+        assertEquals(amount, alcohols.getVolume());
+    }
+
+    @ParameterizedTest
+    @ValueSource(floats = {10000, 40000, 80000, 100000})
+    @DisplayName("Overfilling Drinks should throw DrinkOverflowException")
+    public void overfillDrink(float amount, Alcohol alcohol) {
+        Throwable exception = assertThrows(DrinkOverflowException.class, () -> alcohol.fillDrink(amount));
+        assertEquals("DrinkOverflowException: Overfilled drink by "+(amount) + "ml", exception.getMessage() );
     }
 
     @Test
