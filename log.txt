@@ -1,0 +1,47 @@
+commit dc04dd37623c6839cf783a9c746c36b4542af6f1
+Author: Ano <81051693+Mushroom-Ano@users.noreply.github.com>
+Date:   Wed Oct 15 12:26:10 2025 +0100
+
+    CREATE: Tea class, exception for tea, notdrink!
+
+commit 597d23ca132c8306f70ba98f32578570bcf76e55
+Author: Ano <81051693+Mushroom-Ano@users.noreply.github.com>
+Date:   Wed Oct 15 12:14:31 2025 +0100
+
+    CREATE: Tea class, exception for tea, toomuchcaffeineexception with a caffeine parameter.
+
+commit 31956fe1a2a8e77a0c2ab1f5f7b4ac757042e4bb
+Author: Ano <81051693+Mushroom-Ano@users.noreply.github.com>
+Date:   Wed Oct 15 11:39:15 2025 +0100
+
+    CREATE: exception testing, toomuchalcohol exception!
+
+commit e423aa02c6e40918b1b0bd91e367ea7c73f8d193
+Author: Ano <81051693+Mushroom-Ano@users.noreply.github.com>
+Date:   Wed Oct 15 11:30:40 2025 +0100
+
+    CREATE: exception testing, alcoholpercentage.
+
+commit 197fe7a449a53304ef0ae80bffa74f2abbdace5c
+Author: Ano <81051693+Mushroom-Ano@users.noreply.github.com>
+Date:   Wed Oct 15 11:11:18 2025 +0100
+
+    CREATE: test cases for Alcohol class, inherit toDrink, check if drink is drunk!
+
+commit d7219a335f76f7d384a79d3168eebf0a74515033
+Author: Ano <81051693+Mushroom-Ano@users.noreply.github.com>
+Date:   Wed Oct 15 10:26:23 2025 +0100
+
+    CREATE: drinkable interface, with constructor with boolean return type.
+
+commit 93548e3c3aeea739a0f187f9226a3a431428fe5d
+Author: Ano <81051693+Mushroom-Ano@users.noreply.github.com>
+Date:   Wed Oct 15 10:13:42 2025 +0100
+
+    CREATE: initial project files, with junit dependencies.
+
+commit 53de8ba4ef03ec532fe0323772424d60be1f9693
+Author: Ano <81051693+Mushroom-Ano@users.noreply.github.com>
+Date:   Wed Oct 15 10:13:24 2025 +0100
+
+    CREATE: initial project files, with junit dependencies.
