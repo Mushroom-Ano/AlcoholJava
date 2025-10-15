@@ -2,11 +2,13 @@ package com.drink.alcohol;
 
 import com.drink.Drink;
 
+import java.util.Optional;
+
 public class Alcohol extends Drink {
 
     private float alcoholPercent;
     private boolean isSparkling;
-    private String brand;
+    private Optional<String> brand;
 
     public Alcohol(String name, float volume, float price, float alcoholPercent, boolean isSparkling) throws TooMuchAlcoholException, DrunkException{
         super(name, volume, price);
@@ -19,9 +21,10 @@ public class Alcohol extends Drink {
         }
         this.alcoholPercent = alcoholPercent;
         this.isSparkling = isSparkling;
+        this.brand = Optional.empty();
     }
 
-    public Alcohol(String name, float volume, float price, float alcoholPercent, boolean isSparkling, String brand) throws TooMuchAlcoholException, DrunkException{
+    public Alcohol(String name, float volume, float price, float alcoholPercent, boolean isSparkling, Optional<String> brand) throws TooMuchAlcoholException, DrunkException{
         this(name, volume, price, alcoholPercent, isSparkling);
         this.brand = brand;
     }
@@ -36,5 +39,13 @@ public class Alcohol extends Drink {
     @Override
     public boolean isDrinkable() {
         return true;
+    }
+
+    public String getBrand() {
+        return brand.orElse("No Brand");
+    }
+
+    public void setBrand(Optional<String> brand) {
+        this.brand = brand;
     }
 }
